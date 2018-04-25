@@ -11,6 +11,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { StudentComponent } from './student/student.component';
 import { ListComponent } from './student/list/list.component';
 import { CreateComponent } from './student/create/create.component';
+import { RegistrationComponent } from './registration/registration.component';
 
 @NgModule({
   declarations: [
@@ -19,7 +20,8 @@ import { CreateComponent } from './student/create/create.component';
     DashboardComponent,
     StudentComponent,
     ListComponent,
-    CreateComponent
+    CreateComponent,
+    RegistrationComponent
   ],
   imports: [
     BrowserModule,
