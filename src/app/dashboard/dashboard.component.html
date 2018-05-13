@@ -226,7 +226,7 @@
                     </li>
                     <li class="divider"></li>
                     <li>
-                        <a href="login.html">
+                        <a (click)="logout()">
                             <i class="fa fa-sign-out fa-fw"></i> Logout</a>
                     </li>
                 </ul>
@@ -251,12 +251,12 @@
                         <!-- /input-group -->
                     </li>
                     <li>
-                        <a href="dashboard">
+                        <a [routerLink]="['/dashboard']">
                             <i class="fa fa-dashboard fa-fw"></i> Dashboard</a>
                     </li>
                     <li>
-                        <a [routerLink]="['Student']">
-                            <i class="fa fa-user fa-fw"></i> Student</a>
+                        <a [routerLink]="['user']">
+                            <i class="fa fa-user fa-fw"></i> Contacts</a>
                         <!-- <ul class="nav nav-second-level">
                           <li>
                               <a href="flot.html">View Students</a>
@@ -277,12 +277,7 @@
     <div id="page-wrapper">
         <div class="row">
             <div class="col-lg-12">
-                <h1 class="page-header">Students</h1>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <router-outlet></router-outlet>
-                </div>
+                <router-outlet></router-outlet>
             </div>
         </div>
     </div>

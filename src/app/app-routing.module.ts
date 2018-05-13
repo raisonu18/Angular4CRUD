@@ -1,12 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterModule, Routes } from '@angular/router';
-import { UserComponent } from './user/user.component';
+import { UserComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { StudentComponent } from './student/student.component';
-import { CreateComponent } from './student/create/create.component';
-import { ListComponent } from './student/list/list.component';
+import { StudentComponent } from './users/users.component';
+import { CreateComponent } from './users/create/create.component';
+import { ListComponent } from './users/list/list.component';
+import { AuthGuard } from './auth.guard';
 const routes: Routes = [
   { path: '', component: UserComponent },
   {
@@ -16,16 +17,15 @@ const routes: Routes = [
     path: 'login', component: UserComponent,
   },
   {
-    path: 'dashboard', component: DashboardComponent,
+    path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard],
     children: [
       {
-        path: 'Student', component: ListComponent
+        path: 'user', component: ListComponent, canActivate: [AuthGuard],
       },
       {
-        path: 'Student/create', component: CreateComponent
+        path: 'user/create', component: CreateComponent, canActivate: [AuthGuard],
       },
     ]
-
   },
 ];
 @NgModule({
