@@ -14,11 +14,19 @@ import { HttpErrorResponse } from '@angular/common/http'
   providers: [ContactService, ContactModel],
 })
 export class CreateComponent implements OnInit {
-
   constructor(private contactService: ContactService,
-    private contactModel: ContactModel,public router: Router) { }
+    private contactModel: ContactModel, private toastr: ToastrService, public router: Router) { }
 
   ngOnInit() {
+  }
+  onSubmit(form: NgForm) {
+    console.log(form.value);
+    this.contactService.CreateContact(form.value).subscribe(data => {
+      this.toastr.success("Contact Created Successfully.", 'Contact');
+      form.reset();
+    }, (error: HttpErrorResponse) => {
+      this.toastr.error(error.message, 'Contact');
+    })
   }
 
 }

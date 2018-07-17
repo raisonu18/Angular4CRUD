@@ -19,10 +19,10 @@ export class DashboardComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.dashboardService.getDetail().subscribe(data => {
-      console.log(data);
-    },(error: HttpErrorResponse) => {
-    });
+    // this.dashboardService.getDetail().subscribe(data => {
+    //   console.log(data);
+    // },(error: HttpErrorResponse) => {
+    // });
   }
   logout() {
     localStorage.removeItem("userToken");
