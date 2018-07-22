@@ -58,15 +58,14 @@
               </div>
               <div class="form-group">
                 <label>Contact Type</label>
-                <select class="form-control" name="ContactType" [(ngModel)]="contactService.model.ContactType">
-                  <option value="">Please Select</option>
+                <select class="form-control" required name="ContactType" [(ngModel)]="contactService.model.ContactType">
                   <option value="Customer">Customer</option>
                   <option value="Vendor">Vendor</option>
                 </select>
               </div>
             </div>
           </div>
-          <button type="submit" [disabled]="!contactService.valid" class="btn btn-success">Create</button>
+          <button type="submit" [disabled]="!contactForm.valid" class="btn btn-success">Create</button>
           <button type="reset" class="btn btn-default">Back</button>
         </form>
       </div>

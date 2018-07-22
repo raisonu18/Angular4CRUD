@@ -25,7 +25,6 @@ export class UserComponent implements OnInit {
     this.loginService.postLogin(form.value).subscribe(data => {
       if (data.status != "" || data.status != undefined || data.status != null) {
         localStorage.setItem("userToken", data.status);
-        debugger;
         var token = data.status;
         const helper = new JwtHelperService();
         const decodedToken = helper.decodeToken(token);

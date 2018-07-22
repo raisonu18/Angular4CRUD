@@ -4,7 +4,6 @@ import { ToastrService } from 'ngx-toastr';
 import { Router } from '@angular/router'
 import { ContactModel } from './shared/contact-model';
 import { ContactService } from './shared/contact.service';
-import { JwtHelperService } from '@auth0/angular-jwt';
 import { HttpErrorResponse } from '@angular/common/http'
 
 @Component({
@@ -18,15 +17,15 @@ export class CreateComponent implements OnInit {
     private contactModel: ContactModel, private toastr: ToastrService, public router: Router) { }
 
   ngOnInit() {
+    
   }
   onSubmit(form: NgForm) {
-    console.log(form.value);
     this.contactService.CreateContact(form.value).subscribe(data => {
       this.toastr.success("Contact Created Successfully.", 'Contact');
       form.reset();
-    }, (error: HttpErrorResponse) => {
-      this.toastr.error(error.message, 'Contact');
+      this.router.navigate(['/dashboard/user']);
+    }, (error) => {
+      this.toastr.error("Contact is not created. Please enter all required fields.", 'Contact');
     })
   }
-
 }

@@ -1,16 +1,16 @@
 import { ContactType } from './ContactType';
 export class ContactModel {
-    FirstName: string;
-    LastName: string;
-    CompanyName: string;
-    Email: string;
-    Phone: string;
-    Mobile: string;
-    Website: string;
-    Address1: string;
-    Address2: string;
-    City: string;
-    State: string;
-    Country: number;
-    ContactType: ContactType
+    firstName: string;
+    lastName: string;
+    companyName: string;
+    email: string;
+    phone: string;
+    mobile: string;
+    website: string;
+    address1: string;
+    address2: string;
+    city: string;
+    state: string;
+    country: number;
+    contactType: ContactType
 }
