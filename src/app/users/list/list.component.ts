@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ContactModel } from '../create/shared/contact-model';
-import { ContactService } from '../create/shared/contact.service';
+import { ContactModel } from '../shared/contact-model';
+import { ContactService } from '../shared/contact.service';
 import { ToastrService } from 'ngx-toastr';
 import { HttpErrorResponse } from '@angular/common/http';
 import { Router } from '@angular/router';

@@ -14,6 +14,10 @@ import { StudentComponent } from './users/users.component';
 import { ListComponent } from './users/list/list.component';
 import { CreateComponent } from './users/create/create.component';
 import { RegistrationComponent } from './registration/registration.component';
+import { EditComponent } from './users/edit/edit.component';
+import { ProductsComponent } from './products/products.component';
+import { ProductViewComponent } from './products/product-view/product-view.component';
+import { ProductCreateComponent } from './products/product-create/product-create.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +28,10 @@ import { RegistrationComponent } from './registration/registration.component';
     ListComponent,
     CreateComponent,
     RegistrationComponent,
+    EditComponent,
+    ProductsComponent,
+    ProductViewComponent,
+    ProductCreateComponent,
   ],
   imports: [
     BrowserModule,

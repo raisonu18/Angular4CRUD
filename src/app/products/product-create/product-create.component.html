@@ -1,0 +1,89 @@
+<div class="row">
+  <div class="col-lg-12">
+    <h1 class="page-header">Add Product</h1>
+  </div>
+  <div class="col-lg-9">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <form role="form" #contactForm="ngForm" (ngSubmit)="onSubmit(contactForm)">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label>Product Name</label>
+                <input class="form-control" placeholder="Product Name" required name="ProductName" type="text">
+              </div>
+              <div class="form-group">
+                <label>Product Type</label>
+                <select class="form-control" placeholder="Product Type" name="ProductType">
+                  <option value="RawProduct">Raw Product</option>
+                  <option value="FinishedProduct">Finished Product</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Brand</label>
+                <input class="form-control" placeholder="Brand" name="Brand" type="text">
+              </div>
+              <div class="form-group">
+                <label>Color</label>
+                <input class="form-control" placeholder="Color" name="Color" type="text">
+              </div>
+              <div class="form-group">
+                <label>Active</label>
+                <select class="form-control" placeholder="Out of Stock" required name="Active">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                  </select>
+              </div>
+              <div class="form-group">
+                <label>Out of Stock</label>
+                <select class="form-control" placeholder="Out of Stock" required name="OutofStock">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                  </select>
+              </div>
+              <div class="form-group">
+                <label>Product Description</label>
+                <textarea class="form-control" name="ProductDescription" rows="3"></textarea>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label>Product Code</label>
+                <input class="form-control" placeholder="Product Code" name="ProductCode" type="text">
+              </div>
+              <div class="form-group">
+                <label>SKU</label>
+                <input class="form-control" placeholder="SKU" required name="SKU" type="text">
+              </div>
+              <div class="form-group">
+                <label>Size</label>
+                <input class="form-control" placeholder="Size" name="Size" type="text">
+              </div>
+              <div class="form-group">
+                <label>Weight</label>
+                <input class="form-control" placeholder="Weight" required name="Weight" type="text">
+              </div>
+              <div class="form-group">
+                <label>Bar Code</label>
+                <input class="form-control" placeholder="Bar Code" name="BarCode" type="text">
+              </div>
+              <div class="form-group">
+                <label>Minimum Stock Qty</label>
+                <input class="form-control" placeholder="Minimum Stock Qty" name="MinimumStockQty" type="text">
+              </div>
+              <div class="form-group">
+                <label>Product Summary</label>
+                <textarea class="form-control" name="Product Summary" rows="3"></textarea>
+              </div>
+            </div>
+          </div>
+          <button type="submit" [disabled]="!contactForm.valid" class="btn btn-success">Create</button>
+          <button type="reset" class="btn btn-default" [routerLink]="['/dashboard/user']">Back</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3">
+      <span id="upload"><input id="ember2023" multiple="" accept="image/gif,image/jpeg,image/png,image/bmp,image/jpg" class="form-control upload ember-view" type="file"></span>
+  </div>
+</div>
