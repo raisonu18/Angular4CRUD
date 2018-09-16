@@ -4,9 +4,16 @@ import { RouterModule, Routes } from '@angular/router';
 import { UserComponent } from './login/login.component';
 import { RegistrationComponent } from './registration/registration.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
-import { StudentComponent } from './users/users.component';
+import { ProductsComponent } from './products/products.component';
 import { CreateComponent } from './users/create/create.component';
+import { EditComponent } from './users/edit/edit.component';
 import { ListComponent } from './users/list/list.component';
+import { ProductViewComponent } from './products/product-view/product-view.component';
+import { ProductCreateComponent } from './products/product-create/product-create.component';
+import { ProductEditComponent } from './products/product-edit/product-edit.component';
+import { EmployeeViewComponent } from './employee/employee-view/employee-view.component';
+import { EmployeeCreateComponent } from './employee/employee-create/employee-create.component';
+import { EmployeeEditComponent } from './employee/employee-edit/employee-edit.component';
 import { AuthGuard } from './auth.guard';
 const routes: Routes = [
   { path: '', component: UserComponent },
@@ -24,6 +31,24 @@ const routes: Routes = [
       },
       {
         path: 'user/create', component: CreateComponent, canActivate: [AuthGuard],
+      },
+      {
+        path: 'user/edit/:id', component: EditComponent, canActivate: [AuthGuard],
+      },
+      {
+        path: 'product', component: ProductViewComponent, canActivate: [AuthGuard],
+      },
+      {
+        path: 'product/create', component: ProductCreateComponent, canActivate: [AuthGuard],
+      },
+      {
+        path: 'product/edit/:id', component: ProductEditComponent, canActivate: [AuthGuard],
+      },
+      {
+        path: 'employee', component: EmployeeViewComponent, canActivate: [AuthGuard],
+      },
+      {
+        path: 'employee/create', component: EmployeeCreateComponent, canActivate: [AuthGuard],
       },
     ]
   },

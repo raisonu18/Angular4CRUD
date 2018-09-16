@@ -1,0 +1,90 @@
+<div class="row">
+  <div class="col-lg-12">
+    <h1 class="page-header">Edit Product</h1>
+  </div>
+  <div class="col-lg-9">
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <form role="form" #productForm="ngForm" (ngSubmit)="onSubmit(productForm)">
+          <div class="row">
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label>Product Name</label>
+                <input type="hidden" name="ProductID" [(ngModel)]="productService.model.productID"/>
+                <input class="form-control" placeholder="Product Name" required name="ProductName" type="text" [(ngModel)]="productService.model.productName"/>
+              </div>
+              <div class="form-group">
+                <label>Product Type</label>
+                <select class="form-control" placeholder="Product Type" name="ProductType" [(ngModel)]="productService.model.productType">
+                  <option value="RawProduct">Raw Product</option>
+                  <option value="FinishedProduct">Finished Product</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>Brand</label>
+                <input class="form-control" placeholder="Brand" name="Brand" type="text" [(ngModel)]="productService.model.brand">
+              </div>
+              <div class="form-group">
+                <label>Color</label>
+                <input class="form-control" placeholder="Color" name="Color" type="text" [(ngModel)]="productService.model.color">
+              </div>
+              <div class="form-group">
+                <label>Active</label>
+                <select class="form-control" required name="Active" [(ngModel)]="productService.model.active">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                  </select>
+              </div>
+              <div class="form-group">
+                <label>Out of Stock</label>
+                <select class="form-control" placeholder="Out of Stock" required name="outofStock">
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                  </select>
+              </div>
+              <div class="form-group">
+                <label>Product Description</label>
+                <textarea class="form-control" name="ProductDescription" rows="3" [(ngModel)]="productService.model.productDescription"></textarea>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="form-group">
+                <label>Product Code</label>
+                <input class="form-control" placeholder="Product Code" name="ProductCode" type="text" [(ngModel)]="productService.model.productCode">
+              </div>
+              <div class="form-group">
+                <label>SKU</label>
+                <input class="form-control" placeholder="SKU" required name="SKU" type="text" [(ngModel)]="productService.model.sku">
+              </div>
+              <div class="form-group">
+                <label>Size</label>
+                <input class="form-control" placeholder="Size" name="Size" type="text" [(ngModel)]="productService.model.size">
+              </div>
+              <div class="form-group">
+                <label>Weight</label>
+                <input class="form-control" placeholder="Weight" name="Weight" type="text" [(ngModel)]="productService.model.wight">
+              </div>
+              <div class="form-group">
+                <label>Bar Code</label>
+                <input class="form-control" placeholder="Bar Code" name="BarCode" type="text" [(ngModel)]="productService.model.barCode">
+              </div>
+              <div class="form-group">
+                <label>Minimum Stock Qty</label>
+                <input class="form-control" placeholder="Minimum Stock Qty" required name="MinimumStockQty" type="text" [(ngModel)]="productService.model.minimumStockQty">
+              </div>
+              <div class="form-group">
+                <label>Product Summary</label>
+                <textarea class="form-control" name="Product Summary" name="ProductSummary" rows="3" [(ngModel)]="productService.model.productSummary"></textarea>
+              </div>
+            </div>
+          </div>
+          <button type="submit" [disabled]="!productForm.valid" class="btn btn-success">Update</button>
+          <button type="reset" class="btn btn-default" [routerLink]="['/dashboard/product']">Back</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="col-lg-3">
+      <span id="upload"><input id="ember2023" multiple="" accept="image/gif,image/jpeg,image/png,image/bmp,image/jpg" class="form-control upload ember-view" type="file"></span>
+  </div>
+</div>
