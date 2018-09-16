@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { AngularDateTimePickerModule } from 'angular2-datetimepicker';
 import { HttpModule } from '@angular/http';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -18,6 +18,11 @@ import { EditComponent } from './users/edit/edit.component';
 import { ProductsComponent } from './products/products.component';
 import { ProductViewComponent } from './products/product-view/product-view.component';
 import { ProductCreateComponent } from './products/product-create/product-create.component';
+import { ProductEditComponent } from './products/product-edit/product-edit.component';
+import { EmployeeComponent } from './employee/employee.component';
+import { EmployeeViewComponent } from './employee/employee-view/employee-view.component';
+import { EmployeeCreateComponent } from './employee/employee-create/employee-create.component';
+import { EmployeeEditComponent } from './employee/employee-edit/employee-edit.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +37,11 @@ import { ProductCreateComponent } from './products/product-create/product-create
     ProductsComponent,
     ProductViewComponent,
     ProductCreateComponent,
+    ProductEditComponent,
+    EmployeeComponent,
+    EmployeeViewComponent,
+    EmployeeCreateComponent,
+    EmployeeEditComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,7 +50,8 @@ import { ProductCreateComponent } from './products/product-create/product-create
     HttpModule,
     FormsModule,
     ToastrModule.forRoot(),
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    AngularDateTimePickerModule,
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]

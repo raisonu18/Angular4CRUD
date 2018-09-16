@@ -8,7 +8,7 @@
     </div>
     <div class="panel panel-default">
       <div class="panel-heading">
-        Contacts
+        Products
       </div>
       <!-- /.panel-heading -->
       <div class="panel-body">
@@ -17,28 +17,28 @@
             <thead>
               <tr>
                 <th></th>
-                <th>Name</th>
-                <th>Company Name</th>
-                <th>Email</th>
-                <th>Phone</th>
-                <th>Contact Type</th>
+                <th>Product Name</th>
+                <th>SKU</th>
+                <th>ProductCode</th>
+                <th>OutofStock</th>
+                <th>IsDeleted</th>
                 <th>Action</th>
               </tr>
             </thead>
             <tbody>
-              <!-- <tr *ngFor="let contact of contactService.contactList">
-                <td><input type="hidden" name="ContactID" #ContactID="ngModel" [(ngModel)]="contact.contactID"/></td>
-                <td>{{contact.firstName}} {{contact.lastName}}</td>
-                <td>{{contact.companyName}}</td>
-                <td>{{contact.email}}</td>
-                <td>{{contact.phone}}</td>
-                <td>{{contact.contactTypeValue}}</td>
+              <tr *ngFor="let product of productService.productList">
+                <td><input type="hidden" name="ProductID" #ContactID="ngModel" [(ngModel)]="product.productID"/></td>
+                <td>{{product.productName}}</td>
+                <td>{{product.sku}}</td>
+                <td>{{product.productCode}}</td>
+                <td>{{product.outofStock}}</td>
+                <td>{{product.isDeleted}}</td>
                 <td>
-                  <a href="javascript:void(0)" routerLink="edit/{{contact.contactID}}">
+                  <a href="javascript:void(0)" routerLink="edit/{{product.productID}}">
                       <li class="fa fa-pencil-square-o"></li>
                   </a>
                 </td>
-              </tr> -->
+              </tr>
             </tbody>
           </table>
         </div>

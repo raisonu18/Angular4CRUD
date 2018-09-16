@@ -181,9 +181,29 @@
                     </li>
                     <li>
                         <a [routerLink]="['product']">
-                            <i class="fa fa-user fa-fw"></i>
+                            <i class="fa fa-square"></i>
                             Products
                         </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <i class="fa fa-user fa-fw"></i>
+                            Employees<span class="fa arrow"></span>
+                        </a>
+                        <ul class="nav nav-second-level">
+                            <li>
+                                <a [routerLink]="['employee']">
+                                    <i class="fa fa-user fa-fw"></i>
+                                    Employee View
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#">
+                                    <i class="fa fa-calendar-o"></i>
+                                    Attendance
+                                </a>
+                            </li>
+                        </ul>
                     </li>
                 </ul>
             </div>

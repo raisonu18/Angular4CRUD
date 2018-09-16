@@ -10,8 +10,11 @@ export class ProductModel {
     public Weight: string;
     public Active: boolean;
     public BarCode: string;
-    public OutofStock: string;
+    public OutofStock: boolean;
     public MinimumStockQty: number;
     public ProductDescription: string;
     public ProductSummary: string;
+    // public Status: boolean;
+    // public IsDeleted:boolean;
+    // public TotalAvailableQTY: number;
 }

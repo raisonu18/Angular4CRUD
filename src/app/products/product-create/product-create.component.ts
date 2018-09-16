@@ -19,5 +19,14 @@ export class ProductCreateComponent implements OnInit {
 
   ngOnInit() {
   }
+  onSubmit(form: NgForm) {
+    this.productService.CreateProduct(form.value).subscribe(data => {
+      this.toastr.success("Product Created Successfully.", 'Contact');
+      form.reset();
+      this.router.navigate(['/dashboard/user']);
+    }, (error) => {
+      this.toastr.error("Product is not created. Please enter all required fields.", 'Contact');
+    })
+  }
 
 }
