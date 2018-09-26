@@ -1,14 +1,11 @@
 <div class="row">
   <div class="col-lg-12">
-    <h1 class="page-header">Employee</h1>
+    <h1 class="page-header">Attendance</h1>
   </div>
   <div class="col-lg-12">
-    <div class="form-group">
-      <a class="btn btn-primary" [routerLink]="['create']">Create New</a>
-    </div>
     <div class="panel panel-default">
       <div class="panel-heading">
-        Employees
+        Employees Attendance
       </div>
       <!-- /.panel-heading -->
       <div class="panel-body">
@@ -25,7 +22,7 @@
               </tr>
             </thead>
             <tbody>
-              <tr *ngFor="let employee of employeeService.employeeList">
+              <!-- <tr *ngFor="let employee of employeeService.employeeList">
                 <td><input type="hidden" name="EmployeeID" #EmployeeID="ngModel" [(ngModel)]="employee.employeeID"/></td>
                 <td>{{employee.firstName}} {{employee.lastName}}</td>
                 <td>{{employee.email}}</td>
@@ -36,7 +33,7 @@
                       <li class="fa fa-pencil-square-o"></li>
                   </a>
                 </td>
-              </tr>
+              </tr> -->
             </tbody>
           </table>
         </div>

@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AngularDateTimePickerModule } from 'angular2-datetimepicker';
 import { HttpModule } from '@angular/http';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -23,6 +22,8 @@ import { EmployeeComponent } from './employee/employee.component';
 import { EmployeeViewComponent } from './employee/employee-view/employee-view.component';
 import { EmployeeCreateComponent } from './employee/employee-create/employee-create.component';
 import { EmployeeEditComponent } from './employee/employee-edit/employee-edit.component';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { EmpAttendanceComponent } from './emp-attendance/emp-attendance.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +43,7 @@ import { EmployeeEditComponent } from './employee/employee-edit/employee-edit.co
     EmployeeViewComponent,
     EmployeeCreateComponent,
     EmployeeEditComponent,
+    EmpAttendanceComponent,
   ],
   imports: [
     BrowserModule,
@@ -51,7 +53,7 @@ import { EmployeeEditComponent } from './employee/employee-edit/employee-edit.co
     FormsModule,
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
-    AngularDateTimePickerModule,
+    BsDatepickerModule.forRoot(),
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]
