@@ -7,14 +7,15 @@ export class EmployeeModel {
     public WhatsAppNumber: string;
     public Address1: string;
     public Address2: string;
-    public JoiningDate: Date;
+    public JoiningDate: string;
     public Designation: string;
-    public RelievingDate: Date;
+    public RelievingDate: string;
     public Salary: number;
     public HolidayIncentive: number;
     public OverTimeIncentive: number;
     public ProfileImage: string;
     public DocumentNumber: string;
     public EmployeeType: string;
+    public EmployeeTypeValue: string;
     public UniqueId: string;
 }

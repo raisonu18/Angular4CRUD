@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { AngularDateTimePickerModule } from 'angular2-datetimepicker';
 import { HttpModule } from '@angular/http';
 import { ToastrModule } from 'ngx-toastr';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -23,6 +22,12 @@ import { EmployeeComponent } from './employee/employee.component';
 import { EmployeeViewComponent } from './employee/employee-view/employee-view.component';
 import { EmployeeCreateComponent } from './employee/employee-create/employee-create.component';
 import { EmployeeEditComponent } from './employee/employee-edit/employee-edit.component';
+import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
+import { TimepickerModule } from 'ngx-bootstrap/timepicker';
+import { EmpAttendanceComponent } from './emp-attendance/emp-attendance.component';
+import { TakeAttendanceComponent } from './emp-attendance/take-attendance/take-attendance.component';
+import { AttendanceViewComponent } from './emp-attendance/attendance-view/attendance-view.component';
 
 @NgModule({
   declarations: [
@@ -42,6 +47,9 @@ import { EmployeeEditComponent } from './employee/employee-edit/employee-edit.co
     EmployeeViewComponent,
     EmployeeCreateComponent,
     EmployeeEditComponent,
+    EmpAttendanceComponent,
+    TakeAttendanceComponent,
+    AttendanceViewComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,8 +58,10 @@ import { EmployeeEditComponent } from './employee/employee-edit/employee-edit.co
     HttpModule,
     FormsModule,
     ToastrModule.forRoot(),
+    TimepickerModule.forRoot(),
     BrowserAnimationsModule,
-    AngularDateTimePickerModule,
+    BsDatepickerModule.forRoot(),
+    ButtonsModule.forRoot(),
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]

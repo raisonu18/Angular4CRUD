@@ -10,31 +10,31 @@
             <div class="col-lg-6">
               <div class="form-group">
                 <label>First Name</label>
-                <input class="form-control" placeholder="First Name" required name="FirstName" type="text" />
+                <input class="form-control" placeholder="First Name" required name="FirstName" type="text" [(ngModel)]="model.FirstName"/>
               </div>
               <div class="form-group">
                 <label>Last Name</label>
-                <input class="form-control" placeholder="Last Name" name="LastName" type="text">
+                <input class="form-control" placeholder="Last Name" name="LastName" type="text" [(ngModel)]="model.LastName"/>
               </div>
               <div class="form-group">
                 <label>Email</label>
-                <input class="form-control" placeholder="Email" required name="Email" type="text" />
+                <input class="form-control" placeholder="Email" required name="Email" type="text"  [(ngModel)]="model.Email"/>
               </div>
               <div class="form-group">
                 <label>Phone</label>
-                <input class="form-control" placeholder="Phone" name="Phone" type="text">
+                <input class="form-control" placeholder="Phone" name="Phone" type="text" [(ngModel)]="model.Phone"/>
               </div>
               <div class="form-group">
                 <label>Whats App Number</label>
-                <input class="form-control" placeholder="" name="WhatsAppNumber" type="text">
+                <input class="form-control" placeholder="" name="WhatsAppNumber" type="text" [(ngModel)]="model.WhatsAppNumber"/>
               </div>
               <div class="form-group">
                 <label>Address 1</label>
-                <input class="form-control" placeholder="Address1" name="Address1" type="text">
+                <input class="form-control" placeholder="Address1" name="Address1" type="text" [(ngModel)]="model.Address1"/>
               </div>
               <div class="form-group">
                 <label>Address 2</label>
-                <input class="form-control" placeholder="Address2" name="Address2" type="text">
+                <input class="form-control" placeholder="Address2" name="Address2" type="text" [(ngModel)]="model.Address2"/>
               </div>
 
             </div>
@@ -44,27 +44,28 @@
 
               <div class="form-group">
                 <label>Designation</label>
-                <input class="form-control" placeholder="Designation" name="Designation" type="text">
+                <input class="form-control" placeholder="Designation" name="Designation" type="text" [(ngModel)]="model.Designation"/>
               </div>
               <div class="form-group">
                 <label>Holiday Incentive</label>
-                <input class="form-control" placeholder="Holiday Incentive" name="HolidayIncentive" type="text">
+                <input class="form-control" placeholder="Holiday Incentive" name="HolidayIncentive" type="text" [(ngModel)]="model.HolidayIncentive"/>
               </div>
               <div class="form-group">
                 <label>Document Number</label>
-                <input class="form-control" placeholder="Document Number" required name="DocumentNumber" type="text">
+                <input class="form-control" placeholder="Document Number" required name="DocumentNumber" type="text" [(ngModel)]="model.DocumentNumber"/>
               </div>
               <div class="form-group">
                 <label>Salary</label>
-                <input class="form-control" placeholder="Salary" name="Salary" type="text">
+                <input class="form-control" placeholder="Salary" name="Salary" type="text" [(ngModel)]="model.Salary"/>
               </div>
               <div class="form-group">
                 <label>Over Time Incentive</label>
-                <input class="form-control" placeholder="Over Time Incentive" required name="OverTimeIncentive" type="text">
+                <input class="form-control" placeholder="Over Time Incentive" name="OverTimeIncentive" type="text" [(ngModel)]="model.OverTimeIncentive"/>
               </div>
               <div class="form-group">
                 <label>Employee Type</label>
-                <select class="form-control" placeholder="EmployeeType" name="EmployeeType">
+                <select class="form-control" placeholder="EmployeeType" name="EmployeeType" [(ngModel)]="model.EmployeeType">
+                  <option value="undefined">Select</option>
                   <option value="MonthlyBasis">Monthly Basis</option>
                   <option value="PerUnit">Per Unit</option>
                   <option value="Both">Both</option>
@@ -72,7 +73,8 @@
               </div>
               <div class="form-group">
                 <label>Joining Date</label>
-                <angular2-date-picker [(ngModel)]="Joining" name="Joining" [settings]="settings"></angular2-date-picker>
+                <!-- <input type="text" ngbDatepicker #d="ngbDatepicker" name="JoiningDate"  [(ngModel)]="model.JoiningDate"/> -->
+                <input type="text" name="JoiningDate" placeholder="Joining Date" placement="top" [(ngModel)]="model.JoiningDate" class="form-control" bsDatepicker>
               </div>
 
             </div>

@@ -25,19 +25,18 @@
               </tr>
             </thead>
             <tbody>
-              <!-- <tr *ngFor="let contact of contactService.contactList">
-                <td><input type="hidden" name="ContactID" #ContactID="ngModel" [(ngModel)]="contact.contactID"/></td>
-                <td>{{contact.firstName}} {{contact.lastName}}</td>
-                <td>{{contact.companyName}}</td>
-                <td>{{contact.email}}</td>
-                <td>{{contact.phone}}</td>
-                <td>{{contact.contactTypeValue}}</td>
+              <tr *ngFor="let employee of employeeService.employeeList">
+                <td><input type="hidden" name="EmployeeID" #EmployeeID="ngModel" [(ngModel)]="employee.employeeID"/></td>
+                <td>{{employee.firstName}} {{employee.lastName}}</td>
+                <td>{{employee.email}}</td>
+                <td>{{employee.phone}}</td>
+                <td>{{employee.employeeTypeValue}}</td>
                 <td>
-                  <a href="javascript:void(0)" routerLink="edit/{{contact.contactID}}">
+                  <a href="javascript:void(0)" routerLink="edit/{{employee.employeeID}}">
                       <li class="fa fa-pencil-square-o"></li>
                   </a>
                 </td>
-              </tr> -->
+              </tr>
             </tbody>
           </table>
         </div>

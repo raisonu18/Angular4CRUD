@@ -14,13 +14,7 @@ import { HttpErrorResponse } from '@angular/common/http'
 })
 export class EmployeeCreateComponent implements OnInit {
   model = EmployeeModel;
-  date: Date = new Date();
-  settings = {
-    bigBanner: true,
-    timePicker: false,
-    format: 'dd-MM-yyyy',
-    defaultOpen: false,
-  }
+ 
   constructor(private employeeService: EmployeeService,
     private employeeModel: EmployeeModel, private toastr: ToastrService, public router: Router) { }
 
