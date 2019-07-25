@@ -59,6 +59,7 @@
               <div class="form-group">
                 <label>Contact Type</label>
                 <select class="form-control" required name="ContactType" [(ngModel)]="contactService.model.ContactType">
+                  <option value="undefined">Select</option>
                   <option value="Customer">Customer</option>
                   <option value="Vendor">Vendor</option>
                 </select>

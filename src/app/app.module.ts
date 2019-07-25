@@ -23,7 +23,11 @@ import { EmployeeViewComponent } from './employee/employee-view/employee-view.co
 import { EmployeeCreateComponent } from './employee/employee-create/employee-create.component';
 import { EmployeeEditComponent } from './employee/employee-edit/employee-edit.component';
 import { BsDatepickerModule } from 'ngx-bootstrap/datepicker';
+import { ButtonsModule } from 'ngx-bootstrap/buttons';
+import { TimepickerModule } from 'ngx-bootstrap/timepicker';
 import { EmpAttendanceComponent } from './emp-attendance/emp-attendance.component';
+import { TakeAttendanceComponent } from './emp-attendance/take-attendance/take-attendance.component';
+import { AttendanceViewComponent } from './emp-attendance/attendance-view/attendance-view.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +48,8 @@ import { EmpAttendanceComponent } from './emp-attendance/emp-attendance.componen
     EmployeeCreateComponent,
     EmployeeEditComponent,
     EmpAttendanceComponent,
+    TakeAttendanceComponent,
+    AttendanceViewComponent,
   ],
   imports: [
     BrowserModule,
@@ -52,8 +58,10 @@ import { EmpAttendanceComponent } from './emp-attendance/emp-attendance.componen
     HttpModule,
     FormsModule,
     ToastrModule.forRoot(),
+    TimepickerModule.forRoot(),
     BrowserAnimationsModule,
     BsDatepickerModule.forRoot(),
+    ButtonsModule.forRoot(),
   ],
   providers: [AuthGuard],
   bootstrap: [AppComponent]

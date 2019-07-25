@@ -14,6 +14,7 @@ export class ProductModel {
     public MinimumStockQty: number;
     public ProductDescription: string;
     public ProductSummary: string;
+    public Image: File;
     // public Status: boolean;
     // public IsDeleted:boolean;
     // public TotalAvailableQTY: number;

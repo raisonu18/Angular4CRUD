@@ -1,0 +1,56 @@
+<div class="row">
+    <div class="col-lg-12">
+        <h1 class="page-header">Attendance : {{objDate | date :'dd-MMM-yyyy'}}</h1>
+    </div>
+    <div class="col-lg-12">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                Employees Attendance
+            </div>
+            <!-- /.panel-heading -->
+            <div class="panel-body">
+                <div class="table-responsive">
+                    <table>
+                        <tr>
+                            <th><span>Name</span></th>
+                            <th><span>Status</span></th>
+                            <th><span>In Time</span></th>
+                            <th><span>Out Time</span></th>
+                            <th><span>Note</span></th>
+                            <th><span>Action</span></th>
+                        </tr>
+                        <tr *ngFor="let employeeAtt of attendanceService.employeeAttendanceList">
+                            <td>
+                                <input type="hidden" name="EmployeeID" [(ngModel)]="employeeAtt.employeeID">
+                                <input type="hidden" name="ID" [(ngModel)]="employeeAtt.id">
+                                {{employeeAtt.employeeID}} - {{employeeAtt.firstName}} {{employeeAtt.lastName}}
+                            </td>
+                            <td>
+                                <select class="form-control" placeholder="EmployeeType" name="Status" [(ngModel)]="employeeAtt.status">
+                                    <option value="true">Present</option>
+                                    <option value="false">On Leave</option>
+                                </select>
+                            </td>
+                            <td>
+                                <div class="">
+                                    <timepicker [(ngModel)]="employeeAtt.inTime"  name="inTime" ></timepicker>
+                                </div>
+                            </td>
+                            <td>
+                                <div class="">
+                                    <timepicker [(ngModel)]="employeeAtt.ouTTime"></timepicker>
+                                </div>
+                            </td>
+                            <td>
+                                <textarea name="Note" style="resize: none" type="text" class="form-control" [(ngModel)]="employeeAtt.note" name=""></textarea>
+                            </td>
+                            <td>
+                                <button class="btn btn-primary" (click)='onSubmit(employeeAtt)'>Submit</button>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,51 @@
+body{
+    margin: 0;
+    font-family: 'Open Sans', sans-serif;
+    }
+    
+    .timesheet{
+    width:100%;
+    float:left;
+    }
+    
+    .timesheet .leftside_names{
+    width:600px ;
+    border-left:solid 1px #ccc;
+    margin-left: -1px;
+    float:left;
+    }
+    .timesheet .leftside_names table th ,  
+    .timesheet .leftside_names table td{
+    border-left: none;
+    }
+    
+     table{
+    width:100%;
+    border-top:solid 1px #ccc;
+    white-space: nowrap;
+    text-align:left;
+    border-spacing: 0;
+    font-size:14px;
+    float:left;
+    }
+    table th, table td{
+    padding:10px 10px;
+    border-bottom:solid 1px #ccc;
+    border-left:solid 1px #ccc;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    }
+    
+    .timesheet .rightside_weeks{
+    width:calc(100% - 600px);
+    overflow: auto;
+    float:right;
+    }
+    .timesheet .rightside_weeks   td, .timesheet .rightside_weeks   th{
+    text-align:center;
+    }
+    
+    @media(max-width:1199px){
+    
+    }
+    

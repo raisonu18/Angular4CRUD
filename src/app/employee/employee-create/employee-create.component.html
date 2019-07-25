@@ -65,6 +65,7 @@
               <div class="form-group">
                 <label>Employee Type</label>
                 <select class="form-control" placeholder="EmployeeType" name="EmployeeType" [(ngModel)]="model.EmployeeType">
+                  <option value="undefined">Select</option>
                   <option value="MonthlyBasis">Monthly Basis</option>
                   <option value="PerUnit">Per Unit</option>
                   <option value="Both">Both</option>
@@ -73,7 +74,7 @@
               <div class="form-group">
                 <label>Joining Date</label>
                 <!-- <input type="text" ngbDatepicker #d="ngbDatepicker" name="JoiningDate"  [(ngModel)]="model.JoiningDate"/> -->
-                <input type="text" name="JoiningDate"  [(ngModel)]="model.JoiningDate" class="form-control" bsDatepicker>
+                <input type="text" name="JoiningDate" placeholder="Joining Date" placement="top" [(ngModel)]="model.JoiningDate" class="form-control" bsDatepicker>
               </div>
 
             </div>

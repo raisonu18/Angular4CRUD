@@ -12,6 +12,6 @@ export class ContactModel {
     city: string;
     state: string;
     country: number;
-    contactType: ContactType;
+    contactType: string;
     ContactTypeValue:string;
 }

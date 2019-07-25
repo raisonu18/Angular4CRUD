@@ -17,7 +17,6 @@ export class CreateComponent implements OnInit {
     private contactModel: ContactModel, private toastr: ToastrService, public router: Router) { }
 
   ngOnInit() {
-    
   }
   onSubmit(form: NgForm) {
     this.contactService.CreateContact(form.value).subscribe(data => {

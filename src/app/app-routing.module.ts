@@ -14,7 +14,8 @@ import { ProductEditComponent } from './products/product-edit/product-edit.compo
 import { EmployeeViewComponent } from './employee/employee-view/employee-view.component';
 import { EmployeeCreateComponent } from './employee/employee-create/employee-create.component';
 import { EmployeeEditComponent } from './employee/employee-edit/employee-edit.component';
-import { EmpAttendanceComponent } from './emp-attendance/emp-attendance.component';
+import { AttendanceViewComponent } from './emp-attendance/attendance-view/attendance-view.component';
+import { TakeAttendanceComponent } from './emp-attendance/take-attendance/take-attendance.component';
 import { AuthGuard } from './auth.guard';
 const routes: Routes = [
   { path: '', component: UserComponent },
@@ -55,7 +56,10 @@ const routes: Routes = [
         path: 'employee/edit/:id', component: EmployeeEditComponent, canActivate: [AuthGuard],
       },
       {
-        path: 'empAttendance', component: EmpAttendanceComponent, canActivate: [AuthGuard],
+        path: 'empAttendance', component: AttendanceViewComponent, canActivate: [AuthGuard],
+      },
+      {
+        path: 'empAttendance/take', component: TakeAttendanceComponent, canActivate: [AuthGuard],
       },
     ]
   },
